@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Azova Task</string>
+    <string name="my_doctors">My Doctors</string>
+    <string name="select_all">Select All</string>
+    <string name="remove">Remove</string>
+    <string name="contentDescription">image</string>
+
+    <!--for Add  Doctor screen-->
+    <string name="add_doctor">Add Doctor</string>
+    <string name="hint_doctor_name">Doctor Name</string>
+    <string name="hint_doctor_specialization">Doctor Specialization</string>
+    <string name="lbl_add">Add</string>
+    <string name="hint_search_doctor">Search Doctor</string>
+    <string name="tv_news_feeds">News Feeds</string>
+    <string name="hint_search_your_feed">Search Your Feed</string>
+    <string name="tv_no_data_found">No Data Found!!!</string>
+</resources>

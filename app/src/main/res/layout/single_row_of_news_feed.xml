@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_8sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvImage"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_150sdp"
+        app:cardCornerRadius="@dimen/_8sdp"
+        android:layout_margin="@dimen/_1sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/contentDescription"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_user" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/st_tv_normal.bold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Title"
+        android:layout_marginEnd="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@+id/cvImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/barrierVertical"
+        />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        style="@style/st_tv_small.light_gray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Description"
+        android:layout_marginEnd="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@+id/barrierHorizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        style="@style/st_tv_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Author"
+        android:textColor="@color/pink"
+        android:gravity="end"
+        app:layout_constraintWidth_max="@dimen/_80sdp"
+        app:layout_constraintTop_toBottomOf="@+id/cvImage"
+        app:layout_constraintBottom_toTopOf="@+id/tvDate"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/st_tv_extra_small.light_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="21-3-1002"
+        android:gravity="end"
+        app:layout_constraintTop_toBottomOf="@+id/tvAuthor"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/clr_tv_light_gray"
+        android:layout_marginVertical="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvDate,tvTitle"
+        app:barrierDirection="bottom"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrierVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvAuthor,tvDate"
+        app:barrierDirection="start"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
